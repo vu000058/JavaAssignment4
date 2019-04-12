@@ -18,7 +18,7 @@ import org.eclipse.microprofile.openapi.annotations.servers.Server;
     description = "API resource for Shopping Cart Application"
     ),
     servers = {
-        @Server(url = "/shopping")
+        @Server(url = "/assignment4")
     }
 )
 @DeclareRoles({USER_ROLENAME, ADMIN_ROLENAME})

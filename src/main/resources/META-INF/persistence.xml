@@ -5,10 +5,18 @@
   <persistence-unit name="assignment4" transaction-type="JTA">
     <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
     <jta-data-source>jdbc/assignment4</jta-data-source>
+    <class>com.algonquincollege.cst8277.models.Audit</class>
+    <class>com.algonquincollege.cst8277.models.ModelBase</class>
+    <class>com.algonquincollege.cst8277.models.Cart</class>
+    <class>com.algonquincollege.cst8277.models.CartItem</class>
+    <class>com.algonquincollege.cst8277.models.Item</class>
+    <class>com.algonquincollege.cst8277.models.Customer</class>
+    <class>com.algonquincollege.cst8277.models.PlatformRole</class>
+    <class>com.algonquincollege.cst8277.models.PlatformUser</class>
     <exclude-unlisted-classes>false</exclude-unlisted-classes>
     <properties>
+    <!--   <property name="javax.persistence.schema-generation.database.action" value="create"/> --> 
       <property name="eclipselink.target-database" value="org.eclipse.persistence.platform.database.H2Platform" />
-      <property name="javax.persistence.schema-generation.database.action" value="create"/>
     </properties>
   </persistence-unit>
 </persistence>

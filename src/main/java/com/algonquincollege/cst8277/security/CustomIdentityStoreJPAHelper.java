@@ -1,8 +1,8 @@
 package com.algonquincollege.cst8277.security;
 
-import static com.algonquincollege.cst8277.security.Assignment4Constants.FIND_PLATFORM_USER_BY_NAME_QUERYNAME;
-import static com.algonquincollege.cst8277.security.Assignment4Constants.NAME_PARAM;
-import static com.algonquincollege.cst8277.security.Assignment4Constants.PU_NAME;
+import static com.algonquincollege.cst8277.utils.Assignment4Constants.FIND_PLATFORM_USER_BY_NAME_QUERYNAME;
+import static com.algonquincollege.cst8277.utils.Assignment4Constants.NAME_PARAM;
+import static com.algonquincollege.cst8277.utils.Assignment4Constants.PU_NAME;
 import static java.util.Collections.emptySet;
 
 import java.util.Set;
@@ -15,9 +15,8 @@ import javax.persistence.PersistenceContext;
 import javax.persistence.TypedQuery;
 import javax.security.enterprise.identitystore.Pbkdf2PasswordHash;
 
-import com.algonquincollge.cst8277.model.PlatformRole;
-import com.algonquincollge.cst8277.model.PlatformUser;
-
+import com.algonquincollege.cst8277.models.PlatformRole;
+import com.algonquincollege.cst8277.models.PlatformUser;
 
 @ApplicationScoped
 @Default

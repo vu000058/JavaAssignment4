@@ -23,6 +23,7 @@ import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
+import javax.persistence.Transient;
 
 import com.algonquincollege.cst8277.security.Assignment4Constants;
 
@@ -51,6 +52,7 @@ public class PlatformUser extends ModelBase implements Serializable {
     private String lastName;
     private String email;
     private List<Cart> carts = new ArrayList<Cart>();
+    private String password;
     
     protected String username;
     protected String pwHash;
@@ -120,5 +122,15 @@ public class PlatformUser extends ModelBase implements Serializable {
 
     public void setCarts(List<Cart> carts) {
         this.carts = carts;
+    }
+    
+    @Transient
+    @JsonbTransient
+    public String getPassword() {
+        return password;
+    }
+    
+    public void setPassword(String password) {
+        this.password = password;
     }
 }

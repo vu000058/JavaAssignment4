@@ -1,6 +1,8 @@
 package com.algonquincollge.cst8277.rest;
 
 import javax.ejb.EJB;
+import javax.inject.Inject;
+import javax.security.enterprise.SecurityContext;
 import javax.ws.rs.Consumes;
 import javax.ws.rs.DELETE;
 import javax.ws.rs.GET;
@@ -27,6 +29,9 @@ public class CartResource {
     
     @EJB
     protected CartBean cartBean;
+    
+    @Inject
+    protected SecurityContext sc;
     
     @GET
     @Path("/{id}")
