@@ -64,5 +64,6 @@ public class Customer extends ModelBase implements Serializable {
 
     public void setPlatformUser(PlatformUser platformUser) {
         this.platformUser = platformUser;
+        this.platformUser.setCustomer(this);
     }
 }
