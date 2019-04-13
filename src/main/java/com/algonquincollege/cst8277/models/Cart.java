@@ -24,7 +24,7 @@ public class Cart extends ModelBase implements Serializable {
     }
     
     @JsonbTransient
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne
     @JoinColumn
     public Customer getCustomer() {
         return customer;

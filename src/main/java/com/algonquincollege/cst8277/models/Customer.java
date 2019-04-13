@@ -46,13 +46,14 @@ public class Customer extends ModelBase implements Serializable {
         this.email = email;
     }
     
-    @OneToMany(mappedBy = "customer", fetch = FetchType.LAZY)
+    @OneToMany(mappedBy = "customer", cascade = CascadeType.ALL)
     public List<Cart> getCarts() {
         return carts;
     }
 
     public void setCarts(List<Cart> carts) {
         this.carts = carts;
+        this.carts.forEach(cart -> cart.setCustomer(this));
     }
 
     @JsonbTransient
